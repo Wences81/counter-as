@@ -8,7 +8,7 @@ export function get_num(): i8 {
 // Public method - Increment the counter
 export function increment(): void {
   safeguard_overflow()
-  const new_value = get_num() + 1;
+  const new_value = get_num() + 2;
   storage.set<i8>("counter", new_value);
   logging.log("Increased number to " +  new_value.toString());
 }
@@ -16,7 +16,7 @@ export function increment(): void {
 // Public method - Decrement the counter
 export function decrement(): void {
   safeguard_underflow()
-  const new_value = get_num() - 1;
+  const new_value = get_num() - 2;
   storage.set<i8>("counter", new_value);
   logging.log("Decreased number to " + new_value.toString());
 }
