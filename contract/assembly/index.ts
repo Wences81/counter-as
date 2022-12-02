@@ -30,11 +30,11 @@ export function reset(): void {
 // Private method - Safeguard against overflow
 function safeguard_overflow(): void{
   const value = get_num()
-  assert(value < 127, "Counter is at maximum")
+  assert(value < 31, "Counter is at maximum")
 }
 
 // Private method - Safeguard against underflow
 function safeguard_underflow(): void{
   const value = get_num()
-  assert(value > -128, "Counter is at minimum")
+  assert(value > -28, "Counter is at minimum")
 }
